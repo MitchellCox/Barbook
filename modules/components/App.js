@@ -7,11 +7,11 @@ export default React.createClass({
     return (
       <div>
         <Title render="Drink"/>
-        <h1>Drinks.</h1>
+        <h1>Drinks</h1>
         <ul>
           <li><IndexLink to="/">Home</IndexLink></li>
-          <li><Link to="/dragon">About!</Link></li>
-          <li><Link to="/not-dragon">Contact</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
         {this.props.children}
       </div>
