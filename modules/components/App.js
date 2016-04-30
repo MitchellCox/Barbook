@@ -6,12 +6,12 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Title render="Awesome App"/>
-        <h1>Welcome to your app.</h1>
+        <Title render="Drink"/>
+        <h1>Drinks.</h1>
         <ul>
           <li><IndexLink to="/">Home</IndexLink></li>
-          <li><Link to="/dragon">A DRAGON!</Link></li>
-          <li><Link to="/not-dragon">An old URL to a DRAGON!</Link></li>
+          <li><Link to="/dragon">About!</Link></li>
+          <li><Link to="/not-dragon">Contact</Link></li>
         </ul>
         {this.props.children}
       </div>
