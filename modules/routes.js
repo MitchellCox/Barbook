@@ -1,13 +1,14 @@
 import '../modules/styles.css'
 import React from 'react'
-import { Route, IndexRoute, Redirect } from 'react-router'
+import { Route, IndexRoute } from 'react-router'
 import { ServerRoute } from 'react-project'
-import hello from './api/hello'
 import App from './components/App'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import NoMatch from './components/NoMatch'
+import Sign_In from './components/Sign_In'
+import Sign_Up from './components/Sign_Up'
 
 export default (
   <Route>
@@ -19,7 +20,6 @@ export default (
       <Route path="sign-up" component={Sign_Up}/> 
     </Route>
     <ServerRoute path="/api">
-      <ServerRoute path=":hello" get={hello}/>
     </ServerRoute>
     <Route path="*" status={404} component={NoMatch}/>
   </Route>
