@@ -1,12 +1,10 @@
 import React from 'react'
 
-class Result extends React.Component {
+class Search extends React.Component {
 	constructor(props) {
 		super(props)
 	}
 }
-
-
 
 render() {
 	return(
