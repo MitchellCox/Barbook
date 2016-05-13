@@ -1,4 +1,5 @@
 import React from 'react'
+import favicon from '../favicon.ico'
 
 const { arrayOf, string, node, object } = React.PropTypes
 
