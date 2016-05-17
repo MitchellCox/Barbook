@@ -6,7 +6,7 @@ export default React.createClass({
     return (
       <div>
         <Title render={prev => `${prev} | About`}/>
-        <h2>About</h2>
+        <h2>BarBook is the web's leading cocktail database.</h2>
       </div>
     )
   }
