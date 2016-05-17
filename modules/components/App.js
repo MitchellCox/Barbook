@@ -15,30 +15,33 @@ class App extends React.Component {
   
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper">
-            <a href="/" className="brand-logo">Drinks</a>
-            <ul className="right">
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li>
-                {this.props.auth ? (
-                  <a href="#"
-                    onClick= { e => {
-                      {
-                        e.preventDefault()
-                        this.props.dispatch(logout())
-                        this.props.history.push('/login')
-                      }
-                    }}
-                  >
-                    Log out
-                  </a>
-                ) : (<Link to="/login">Sign in</Link>)}
-              </li>
-            </ul>
-        </div>
-      </nav>
+      <div>
+        <nav>
+          <div className="nav-wrapper">
+              <a href="/" className="brand-logo">Drinks</a>
+              <ul className="right">
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                <li>
+                  {this.props.auth ? (
+                    <a href="#"
+                      onClick= { e => {
+                        {
+                          e.preventDefault()
+                          this.props.dispatch(logout())
+                          this.props.history.push('/login')
+                        }
+                      }}
+                    >
+                      Log out
+                    </a>
+                  ) : (<Link to="/login">Sign in</Link>)}
+                </li>
+              </ul>
+          </div>
+        </nav>
+        {this.props.children}
+      </div>
     )
   }
 }
