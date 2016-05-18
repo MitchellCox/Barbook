@@ -1,0 +1,19 @@
+{
+  "name": "Barbook",
+  "description": "cocktail generator",
+  "main": "",
+  "authors": [
+    "trandian@gmail.com",
+    "mitchell.allan.cox@gmail"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MitchellCox/Capstone",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

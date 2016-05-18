@@ -11,7 +11,6 @@ import Login from './components/Login'
 import { signUp, signIn } from './api/auth'
 import { UserAuthWrapper } from 'redux-auth-wrapper'
 import { push } from 'react-router-redux'
-import Search from './components/Search'
 
 const UserIsAuthenticated = UserAuthWrapper({
   authSelector: state => state.auth,
@@ -27,7 +26,6 @@ export default (
       <Route path="about" component={About}/>
       <Route path="contact" component={Contact}/>
       <Route path="login" component={Login}/>
-      <Route path="search" component={Search}/>
     </Route>
     <ServerRoute path="/api">
       <ServerRoute path="signup" post={signUp}/>

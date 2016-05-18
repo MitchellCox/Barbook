@@ -42,6 +42,17 @@ class App extends React.Component {
         </nav>
         {this.props.children}
       </div>
+      <nav>
+        <div className="nav-wrapper">
+          <form>
+            <div className="input-field">
+              <input id="search" type="search" required />
+              <label for="search"><i class="material-icons">list ingredients</i></label>
+              <i className="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
     )
   }
 }
