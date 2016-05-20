@@ -41,7 +41,6 @@ class App extends React.Component {
           </div>
         </nav>
         {this.props.children}
-      </div>
       <nav>
         <div className="nav-wrapper">
           <form>
@@ -53,6 +52,7 @@ class App extends React.Component {
           </form>
         </div>
       </nav>
+    </div>
     )
   }
 }

@@ -43,7 +43,6 @@ const Document = React.createClass({
       </html>
     )
   }
-
 })
 
 export default Document
