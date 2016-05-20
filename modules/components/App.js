@@ -1,9 +1,10 @@
 import React from 'react'
 import { IndexLink, Link } from 'react-router'
-import { logout, loggedIn } from './actions'
 import { connect } from 'react-redux'
+import { logout, loggedIn } from './actions'
 
 class App extends React.Component {
+
   constructor(props) {
     super(props)
   }
@@ -13,11 +14,13 @@ class App extends React.Component {
       this.props.dispatch(loggedIn(sessionStorage.userId, sessionStorage.token))
   }
   
+
   render() {
     return (
       <div>
-        <nav>
-          <div className="nav-wrapper">
+        <div>
+          <nav>
+            <div className="nav-wrapper">
               <a href="/" className="brand-logo">Drinks</a>
               <ul className="right">
                 <li><Link to="/about">About</Link></li>
@@ -35,27 +38,31 @@ class App extends React.Component {
                     >
                       Log out
                     </a>
-                  ) : (<Link to="/login">Sign in</Link>)}
+                  ) : (<Link to="/login">Sign in</Link>)} 
                 </li>
               </ul>
+            </div>
+          </nav>
+          <div>
+            {this.props.children}
+          </div>
+        </div>
+        <nav>
+          <div className="nav-wrapper">
+            <form>
+              <div className="input-field">
+                <input id="search" type="search" required />
+                <label for="search"><i class="material-icons" placeholder="What ingredients do you have?"></i></label>
+                <i className="material-icons">close</i>
+              </div>
+            </form>
           </div>
         </nav>
-        {this.props.children}
       </div>
-      <nav>
-        <div className="nav-wrapper">
-          <form>
-            <div className="input-field">
-              <input id="search" type="search" required />
-              <label for="search"><i class="material-icons">list ingredients</i></label>
-              <i className="material-icons">close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
     )
   }
 }
+
 
 const mapStateToProps = (state) => {
   return { auth: state.auth.isAuthenticated }
