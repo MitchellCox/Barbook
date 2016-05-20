@@ -43,9 +43,6 @@ class App extends React.Component {
               </ul>
             </div>
           </nav>
-          <div>
-            {this.props.children}
-          </div>
         </div>
         <nav>
           <div className="nav-wrapper">
@@ -58,20 +55,8 @@ class App extends React.Component {
             </form>
           </div>
         </nav>
-        {this.props.children}
-      <nav>
-        <div className="nav-wrapper">
-          <form>
-            <div className="input-field">
-              <input id="search" type="search" required />
-              <label for="search"><i class="material-icons">list ingredients</i></label>
-              <i className="material-icons">close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
-    </div>
-  </div>
+        {this.props.children}        
+      </div>
     )
   }
 }
