@@ -1,5 +1,9 @@
 import $ from 'jquery'
+<<<<<<< 69d12c70e4b5c81c2d9ed9a70dd7d885d4b3491a
 import { search } from '../api/search'
+=======
+// import { search } from './api/search'
+>>>>>>> bar book template
 
 export const login = (email,pass,redirect, history) => {
   return(dispatch) => {
@@ -58,7 +62,7 @@ export const loggedIn = (id, token) => {
 	}
 }
 
-export const addSearch = (text) => {
+/* export const addSearch = (text) => {
 	return(dispatch) => {
 		fetch('/api/search',
 		{
@@ -69,4 +73,6 @@ export const addSearch = (text) => {
 		.then( res => res.json())
 		.then( json => dispatch(search('ADD_SEARCH', JSON)))
 	}
-}
+
+} */
+	 

@@ -1,8 +1,6 @@
 import React from 'react'
 import favicon from '../favicon.ico'
-
 const { arrayOf, string, node, object } = React.PropTypes
-
 const shims = `
  (String.prototype.trim && Function.prototype.bind) || document.write('<script src="/es5-shim.js"><\\/script>');
  window.Promise || document.write('<script src="/Promise.js"><\\/script>');
@@ -10,9 +8,7 @@ const shims = `
  window.$ || document.write('<script src="/jquery.min.js"><\\/script>')
  window.materialize || document.write('<script src="/materialize.min.js"><\\/script>')
 `
-
 const Document = React.createClass({
-
   propTypes: {
     styles: arrayOf(node),
     scripts: arrayOf(node),
@@ -20,10 +16,8 @@ const Document = React.createClass({
     title: string,
     initialState: object
   },
-
   render() {
     const { styles, scripts, content, title } = this.props
-
     return (
       <html>
         <head>
@@ -42,5 +36,4 @@ const Document = React.createClass({
     )
   }
 })
-
 export default Document

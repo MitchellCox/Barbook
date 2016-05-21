@@ -27,18 +27,17 @@ export default class Home extends React.Component {
     return (
       <div>
         <Title render={prev => `${prev} | Home`}/>
-      	<h2>Welcome Imbiber</h2>
+        <h2>Welcome Imbiber</h2>
         <body>
-  
-              <form onSubmit={this.getCocktails}>
-                <div className="input-field">
-                  <input required={true} ref="ingredients" id="search" type="search" className="material-icons" placeholder="What ingredients do you have? (comma seperate ingredients)" />
-                  <a type="submit" className="waves-effect waves-light btn-flat">Submit</a>
-                </div>
-              </form>
-
+          <form onSubmit={this.getCocktails}>
+            <div className="input-field">
+              <input required={true} ref="ingredients" id="search" type="search" className="material-icons" placeholder="What ingredients do you have? (comma seperate ingredients)" />
+              <a type="submit" className="waves-effect waves-light btn-flat">Submit</a>
+            </div>
+          </form>
         </body>
       </div>
     )
   }
 }
+
