@@ -10,6 +10,7 @@ import NoMatch from './components/NoMatch'
 import Login from './components/Login'
 import Bar_Book from './components/Bar_Book'
 import { signUp, signIn } from './api/auth'
+import { search } from './api/search'
 import { UserAuthWrapper } from 'redux-auth-wrapper'
 import { push } from 'react-router-redux'
 

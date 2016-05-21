@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import { search } from './api/search'
 
 export const login = (email,pass,redirect, history) => {
   return(dispatch) => {
@@ -62,7 +63,7 @@ export const addSearch = (text) => {
 		fetch('/api/search',
 		{
 			method: 'POST',
-			body: JSON.stringify({text: text})
+			body: JSON.stringify({ text: text })
 		}
 		)
 		.then( res => res.json())

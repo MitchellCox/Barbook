@@ -2,6 +2,7 @@ import React from 'react'
 import { IndexLink, Link } from 'react-router'
 import { connect } from 'react-redux'
 import { logout, loggedIn } from './actions'
+import $ from 'jquery'
 
 class App extends React.Component {
 
@@ -14,6 +15,11 @@ class App extends React.Component {
       this.props.dispatch(loggedIn(sessionStorage.userId, sessionStorage.token))
   }
   
+  componentWillMount() {
+    $(document).ready(function () {
+      $('.parallax').parallax()
+    })
+  }
 
   render() {
     return (
@@ -44,18 +50,7 @@ class App extends React.Component {
             </div>
           </nav>
         </div>
-        <nav>
-          <div className="nav-wrapper">
-            <form>
-              <div className="input-field">
-                <input id="search" type="search" required />
-                <label for="search"><i class="material-icons" placeholder="What ingredients do you have?"></i></label>
-                <i className="material-icons">close</i>
-              </div>
-            </form>
-          </div>
-        </nav>
-        {this.props.children}        
+          {this.props.children}
       </div>
     )
   }
