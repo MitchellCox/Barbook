@@ -20,18 +20,6 @@ const Document = React.createClass({
     initialState: object
   },
 
-  /* componentWillMount() {
-    const script = document.createElement('script')
-    
-    script.src = 'https://www.gstatic.com/firebasejs/live/3.0/firebase.js'
-    let config = { 
-      apiKey : 'AIzaSyCpwHpl_zOfWcX39Zzb8cgHaKHyP5Icduk',
-      authDomain: 'capstone-test-51daf.firebaseapp.com',
-      databaseURL: 'https://capstone-test-51daf.firebaseio.com',
-      storageBucket: 'capstone-test-51daf.appspot.com'
-    }.firebase.initilizeApp(config)
-  }, */ 
-
   render() {
     const { styles, scripts, content, title } = this.props
 

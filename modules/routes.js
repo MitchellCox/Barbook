@@ -8,6 +8,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import NoMatch from './components/NoMatch'
 import Login from './components/Login'
+import Bar_Book from './components/Bar_Book'
 import { signUp, signIn } from './api/auth'
 import { UserAuthWrapper } from 'redux-auth-wrapper'
 import { push } from 'react-router-redux'
@@ -26,6 +27,7 @@ export default (
       <Route path="about" component={About}/>
       <Route path="contact" component={Contact}/>
       <Route path="login" component={Login}/>
+      <Route path="bar_book" component={Bar_Book}/> 
     </Route>
     <ServerRoute path="/api">
       <ServerRoute path="signup" post={signUp}/>
