@@ -1,9 +1,25 @@
 import React from 'react'
 import Title from 'react-title-component'
 
-export default React.createClass({
+export default class Home extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-	compnentWillMount
+  getCocktails(e) {
+    e.preventDefault()
+    let ingredients = this.refs.handle
+    $.ajax({
+      url: '/api/cailtails',
+      type: 'GET',
+      contentType: 'application/json',
+      data: {}
+    }).done(cocktails => {
+      this.setState({
+      }).fail( ()) //call to 404 page in NoMatch
+    })
+  }
+
   render() {
     return (
       <div>
@@ -16,23 +32,26 @@ export default React.createClass({
 
           <div className="section white">
             <div className="row container">
-              <form>
+              <form onSubmit={this.getCocktails}>
                 <div className="input-field">
-                  <input id="search" type="search" required />
-                  <label for="search"><i className="material-icons" placeholder="What ingredients do you have?"></i></label>
-                  <i className="material-icons">close</i>
+                  <input required={true} ref="ingredients" id="search" type="search" className="material-icons" placeholder="What ingredients do you have?" />
+                  <a type="submit" className="waves-effect waves-light btn-flat">Submit
+                    <i className="material-icons right">send</i>
+                  </a>
                 </div>
               </form>
             </div>
           </div>
 
           <div className="parallax-container">
-            <div className="parallax"><img src="../../static/images/wood-textures.jpg" /> </div>
+            <div className="parallax"><img src="../../static/images/wood-textures.jpg" /> 
+              <div 
+            </div>
           </div>
  
         </body>
       </div>
     )
   }
-})
+}
 
