@@ -7,7 +7,8 @@ const shims = `
  (String.prototype.trim && Function.prototype.bind) || document.write('<script src="/es5-shim.js"><\\/script>');
  window.Promise || document.write('<script src="/Promise.js"><\\/script>');
  window.fetch || document.write('<script src="/fetch.js"><\\/script>');
- window.$ || document.write('<script src="/vendor/jquery/dist/jquery.min.js"><\\/script>')
+ window.$ || document.write('<script src="/jquery.min.js"><\\/script>')
+ window.materialize || document.write('<script src="/materialize.min.js"><\\/script>')
 `
 
 const Document = React.createClass({
@@ -28,16 +29,13 @@ const Document = React.createClass({
         <head>
           <meta charSet="utf-8"/>
           <link rel="shortcut icon" href={favicon}/>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" />
-          <title>{title}</title>
-          <link rel="stylesheet" href="/vendor/Materialize/dist/css/materialize.min.css" />
+          <link rel="stylesheet" href="/materialize.min.css" />
+          <title>{title}</title>          
           {styles}
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
           <script dangerouslySetInnerHTML={{ __html: shims }}/>
-          <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
           {scripts}
         </body>
       </html>

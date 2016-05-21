@@ -14,12 +14,6 @@ class App extends React.Component {
     if (sessionStorage.token && !this.props.auth)
       this.props.dispatch(loggedIn(sessionStorage.userId, sessionStorage.token))
   }
-  
-  componentWillMount() {
-    $(document).ready(function () {
-      $('.parallax').parallax()
-    })
-  }
 
   render() {
     return (

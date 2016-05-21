@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from 'react-title-component'
+import $ from 'jquery'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -8,15 +9,17 @@ export default class Home extends React.Component {
 
   getCocktails(e) {
     e.preventDefault()
-    let ingredients = this.refs.handle
+    let ingredients = this.refs.ingredients.split(',')
     $.ajax({
-      url: '/api/cailtails',
+      url: '/api/cocktails',
       type: 'GET',
       contentType: 'application/json',
       data: {}
-    }).done(cocktails => {
-      this.setState({
-      }).fail( ()) //call to 404 page in NoMatch
+    }).done(cocktails => { 
+      this.setState ({ cocktails: cocktails
+      }).fail( () => {
+        this.props.history.push ('./components/NoMatch')
+      }) 
     })
   }
 
@@ -26,32 +29,16 @@ export default class Home extends React.Component {
         <Title render={prev => `${prev} | Home`}/>
       	<h2>Welcome Imbiber</h2>
         <body>
-          <div className="parallax-container">
-            <div className="parallax"><img src="../../static/images/wood-textures.jpg" /> </div>
-          </div>
-
-          <div className="section white">
-            <div className="row container">
+  
               <form onSubmit={this.getCocktails}>
                 <div className="input-field">
-                  <input required={true} ref="ingredients" id="search" type="search" className="material-icons" placeholder="What ingredients do you have?" />
-                  <a type="submit" className="waves-effect waves-light btn-flat">Submit
-                    <i className="material-icons right">send</i>
-                  </a>
+                  <input required={true} ref="ingredients" id="search" type="search" className="material-icons" placeholder="What ingredients do you have? (comma seperate ingredients)" />
+                  <a type="submit" className="waves-effect waves-light btn-flat">Submit</a>
                 </div>
               </form>
-            </div>
-          </div>
 
-          <div className="parallax-container">
-            <div className="parallax"><img src="../../static/images/wood-textures.jpg" /> 
-              <div 
-            </div>
-          </div>
- 
         </body>
       </div>
     )
   }
 }
-
