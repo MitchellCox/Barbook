@@ -7,7 +7,7 @@ export default React.createClass({
       <div>
         <Title render={prev => `${prev} | About`}/>
         <h2>About</h2>
-        <p>BarBook is the web's leading cocktail database.</p>
+        <p>BarBook is creating a community of cocktail enthusiasts who want to learn about cocktails, connect with others, and share their creations.</p>
       </div>
     )
   }

@@ -7,7 +7,7 @@ export default class Home extends React.Component {
     super(props)
   }
 
-  getCocktails(e) {
+    getCocktails(e) {
     e.preventDefault()
     let ingredients = this.refs.ingredients.split(',')
     $.ajax({
