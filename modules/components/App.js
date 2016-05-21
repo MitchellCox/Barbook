@@ -21,7 +21,7 @@ class App extends React.Component {
         <div>
           <nav>
             <div className="nav-wrapper">
-              <a href="/" className="brand-logo">Drinks</a>
+              <a href="/" className="brand-logo">BarBook</a>
               <ul className="right">
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>

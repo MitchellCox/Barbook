@@ -56,3 +56,16 @@ export const loggedIn = (id, token) => {
 		token
 	}
 }
+
+export const addSearch = (text) => {
+	return(dispatch) => {
+		fetch('/api/search',
+		{
+			method: 'POST',
+			body: JSON.stringify({text: text})
+		}
+		)
+		.then( res => res.json())
+		.then( json => dispatch(search('ADD_SEARCH', JSON)))
+	}
+}

@@ -30,6 +30,7 @@ export default (
     <ServerRoute path="/api">
       <ServerRoute path="signup" post={signUp}/>
       <ServerRoute path="signin" post={signIn}/>
+      <ServerRoute path="search" post={search}/>
     </ServerRoute>
     <Route path="*" status={404} component={NoMatch}/>
   </Route>
