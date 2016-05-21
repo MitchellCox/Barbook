@@ -10,10 +10,10 @@ export default React.createClass({
         <p>Drop us a line, tell us about your latest drink, or share a piece of valuable feedback.</p>
           
           <div className="row">
-            <form className="col s12" action="MAILTO:mitchell.allan.cox@gmail.com" method="POST" enctype="text/plain" name="BarBook_Feedback">
+            <form className="col s12 contact_form" action="MAILTO:mitchell.allan.cox@gmail.com" method="POST" enctype="text/plain" name="BarBook_Feedback">
               <div className="row">
                 <div className="input-field col s6">
-                  <input placeholder="Placeholder" id="first_name" type="text" className="validate"/>
+                  <input id="first_name" type="text" className="validate"/>
                   <label for="first_name">First Name</label>
                 </div>
                 <div className="input-field col s6">
@@ -36,7 +36,6 @@ export default React.createClass({
               <div>
                 <div className="input-field col s12">
                   <input className="btn" type="submit" />
-                  <label>Send</label> 
                 </div> 
               </div>
             </form>

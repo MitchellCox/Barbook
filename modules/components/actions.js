@@ -1,9 +1,6 @@
 import $ from 'jquery'
-<<<<<<< 69d12c70e4b5c81c2d9ed9a70dd7d885d4b3491a
 import { search } from '../api/search'
-=======
-// import { search } from './api/search'
->>>>>>> bar book template
+
 
 export const login = (email,pass,redirect, history) => {
   return(dispatch) => {

@@ -2,7 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-	background: url(../../static/images/wood-textures.jpg) no-repeat center center fixed;
+	background: url(../static/images/wood-textures.jpg) no-repeat center center fixed;
 	background-size: cover;
 	color: white;
   }
@@ -12,7 +12,7 @@ main {
   }
 
 main-nav {
-	color: e0e0e0;
+	color: #bcaaa4;
 }
 
 search {
@@ -27,3 +27,8 @@ footer {
 	padding: 1rem;
 	background-color: #efefef;
 	text-align: center;
+}
+
+contact_form {
+	color: white; 
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { IndexLink, Link } from 'react-router'
+import { IndexLink } from 'react-router'
 import { connect } from 'react-redux'
 import { logout, loggedIn } from './actions'
 import $ from 'jquery'
@@ -23,8 +23,8 @@ class App extends React.Component {
             <div className="nav-wrapper">
               <a href="/" className="brand-logo">BarBook</a>
               <ul className="right">
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <li>
                   {this.props.auth ? (
                     <a href="#"
@@ -38,29 +38,17 @@ class App extends React.Component {
                     >
                       Log out
                     </a>
-                  ) : (<Link to="/login">Sign in</Link>)} 
+                  ) : (<a href="/login">Sign in</a>)} 
                 </li>
               </ul>
             </div>
           </nav>
         </div>
-
-        <body>
-          <div class="valign-wrapper">
-            {this.props.children} 
-          </div> 
-        </body>
+        
+        {this.props.children} 
 
         <div className="footer">
           <footer className="page-footer">
-            <div className="container">
-              <div className="row">
-                <div className="col l6 s12">
-                  <h5 className="white-text">Footer Content</h5>
-                  <p className="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-              </div>
-            </div>
             <div className="footer-copyright">
               <div className="container">
               © 2016 BarBook
