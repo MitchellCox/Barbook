@@ -10,7 +10,7 @@ import NoMatch from './components/NoMatch'
 import Login from './components/Login'
 import Bar_Book from './components/Bar_Book'
 import { signUp, signIn } from './api/auth'
-import { search } from './api/search'
+import { getCocktail, createCocktail } from './api/cocktail'
 import { UserAuthWrapper } from 'redux-auth-wrapper'
 import { push } from 'react-router-redux'
 
@@ -33,7 +33,7 @@ export default (
     <ServerRoute path="/api">
       <ServerRoute path="signup" post={signUp}/>
       <ServerRoute path="signin" post={signIn}/>
-      <ServerRoute path="search" post={search}/>
+      <ServerRoute path="cocktail" get={getCocktail} post={createCocktail} />
     </ServerRoute>
     <Route path="*" status={404} component={NoMatch}/>
   </Route>

@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import { search } from '../api/search'
 
 export const login = (email,pass,redirect, history) => {
   return(dispatch) => {

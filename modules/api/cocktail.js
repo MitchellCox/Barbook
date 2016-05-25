@@ -1,8 +1,4 @@
-require('../../db.js')
-// import mongoose from 'mongoose'
-// import $ from 'jquery'
-let mongoose = require('mongoose') 
-let Cocktail = mongoose.model('Cocktail')
+import Cocktail from '../models/cocktail'
 
 export function getCocktail(req, res) {
 	Cocktail.find( function (err, cocktails ) {

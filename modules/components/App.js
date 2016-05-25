@@ -3,9 +3,9 @@ import { IndexLink } from 'react-router'
 import { connect } from 'react-redux'
 import { logout, loggedIn } from './actions'
 import $ from 'jquery'
+import { Button, Icon } from 'react-materialize'
 
 class App extends React.Component {
-
   constructor(props) {
     super(props)
   }
@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <nav className="main-nav">
+          <nav className="navbar-fixed">
             <div className="nav-wrapper blue-grey darken 1 text-color grey-lighten 4">
               <a href="/" className="brand-logo text-color grey-lighten 4">BarBook</a>
               <ul className="right hide-on-med-and-down">

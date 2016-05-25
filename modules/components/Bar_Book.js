@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from 'react-title-component'
+import { Button, Icon } from 'react-materialize'
 
 export default React.createClass({
   render() {

@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from 'react-title-component'
+import { Button, Icon } from 'react-materialize'
 import $ from 'jquery'
 
 export default class Home extends React.Component {
@@ -11,10 +12,10 @@ export default class Home extends React.Component {
     e.preventDefault()
     let ingredients = this.refs.ingredients.split(',')
     $.ajax({
-      url: '/api/cocktails',
+      url: '/api/cocktail',
       type: 'GET',
       contentType: 'application/json',
-      data: {}
+      data: { ingredients }
     }).done(cocktails => { 
       this.setState ({ cocktails: cocktails
       }).fail( () => {
@@ -35,6 +36,8 @@ export default class Home extends React.Component {
               <a type="submit" className="waves-effect waves-light btn-flat white">Submit</a>
             </div>
           </form>
+          <div>
+          </div>
         </body>
       </div>
     )
