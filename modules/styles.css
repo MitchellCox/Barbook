@@ -1,13 +1,7 @@
 body {
-<<<<<<< b8230a2c17ede7c2c345c94d20dcb2114548cacc
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-=======
   display: flex;
   min-height: 100vh;
   flex-direction: column;
->>>>>>> deleted bower_components
 	background: url(../static/images/wood-textures.jpg) no-repeat center center fixed;
 	background-size: cover;
 	color: white;
@@ -18,11 +12,7 @@ main {
   }
 
 main-nav {
-<<<<<<< b8230a2c17ede7c2c345c94d20dcb2114548cacc
-	color: #bcaaa4;
-=======
-	color: ;
->>>>>>> deleted bower_components
+	color: #bcaaa4; 
 }
 
 search {
@@ -39,9 +29,6 @@ footer {
 	text-align: center;
 }
 
-<<<<<<< b8230a2c17ede7c2c345c94d20dcb2114548cacc
 contact_form {
 	color: white; 
 }
-=======
->>>>>>> deleted bower_components

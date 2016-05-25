@@ -11,7 +11,3 @@ import $ from 'jquery'
 // 		alert("Are you sure this is something really have?")
 // 	})
 // }
-<<<<<<< b8230a2c17ede7c2c345c94d20dcb2114548cacc
-=======
-
->>>>>>> deleted bower_components
