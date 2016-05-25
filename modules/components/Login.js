@@ -30,25 +30,69 @@ class Login extends React.Component {
   
   render() {
     return (
-     <div>
-       <h2>Sign Up</h2>
-       <form onSubmit={this.signUp}>
-         <input ref="newEmail" placeholder="email" />
-         <input ref="newPass" placeholder="password"/>
-         <br />
-         <button type="submit">sign up</button>
-      </form>
-      <h2>Sign In</h2>
-      <form onSubmit={this.signIn}>
-        <label><input ref="email" placeholder="email" /></label>
-        <label><input ref="pass" placeholder="password" /></label>
-        <br />
-        <button type="submit">login</button>
-         {this.state.error && (
-           <p>Bad login information</p>
-         )}
-      </form>
-    </div>
+      <div>
+        <div className="row">
+          <div className="col s12 m6">
+            <div className="card blue-grey darken 1"> 
+              <div className="card-content white-text"> 
+                <span className="card-title">Sign Up</span>
+                  <div className="row">
+                    <form onSubmit={this.signUp}>
+                      <div className="row">
+                        <div className="input-field col-s12"> 
+                          <input id="email" type="email" className="validate" ref="newEmail"/>
+                          <label for="email" placeholder="Email">Email</label>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="input-field col-s12"> 
+                          <input id="password" type="password" className="validate" ref="newPass"/>
+                          <label for="password" placeholder="Password">Password</label>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="input-field col s12">
+                          <input className="btn" type="submit" />
+                        </div> 
+                      </div>        
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div className="row">
+            <div className="col s12 m6">
+              <div className="card blue-grey darken 1"> 
+                <div className="card-content white-text"> 
+                  <span className="card-title">Sign In</span>
+                    <form onSubmit={this.signIn}>
+                      <div className="row">
+                        <div className="input-field col-s12"> 
+                          <input id="email" type="email" className="validate" ref="email"/>
+                          <label for="email" placeholder="Email">Email</label>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="input-field col-s12"> 
+                          <input id="password" type="password" className="validate" ref="pass"/>
+                          <label for="password" placeholder="Password">Password</label>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="input-field col s12">
+                          <input className="btn" type="submit"/>
+                        </div> 
+                      </div>        
+                    </form>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          {this.state.error && (
+            <p>Bad login information</p>
+          )}
+      </div>  
    )
   }
 }

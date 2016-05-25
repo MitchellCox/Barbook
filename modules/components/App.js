@@ -20,9 +20,9 @@ class App extends React.Component {
       <div>
         <div>
           <nav className="main-nav">
-            <div className="nav-wrapper">
-              <a href="/" className="brand-logo">BarBook</a>
-              <ul className="right">
+            <div className="nav-wrapper blue-grey darken 1 text-color grey-lighten 4">
+              <a href="/" className="brand-logo text-color grey-lighten 4">BarBook</a>
+              <ul className="right hide-on-med-and-down">
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li>
@@ -44,22 +44,19 @@ class App extends React.Component {
             </div>
           </nav>
         </div>
-        
-        {this.props.children} 
-
+        <div>
+          {this.props.children} 
+        </div> 
         <div className="footer">
-          <footer className="page-footer">
+          <footer className="page-footer blue-grey darken 1">
             <div className="footer-copyright">
               <div className="container">
-              © 2016 BarBook
+                © 2016 BarBook
               </div>
             </div>
           </footer>
         </div>
-
       </div>
-
-
     )
   }
 }
