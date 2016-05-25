@@ -1,6 +1,9 @@
 import $ from 'jquery'
 import { search } from '../api/search'
+<<<<<<< b8230a2c17ede7c2c345c94d20dcb2114548cacc
 
+=======
+>>>>>>> deleted bower_components
 
 export const login = (email,pass,redirect, history) => {
   return(dispatch) => {
