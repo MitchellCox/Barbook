@@ -36,7 +36,11 @@ export default class Home extends React.Component {
               <a type="submit" className="waves-effect waves-light btn-flat white">Submit</a>
             </div>
           </form>
-          <div>
+          <div className="divider"></div>
+          <div className="row results">
+            <div className="col s3"> </div>
+            <div className="col s3"> </div>
+            <div className="col s3"> </div>
           </div>
         </body>
       </div>

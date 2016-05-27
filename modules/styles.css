@@ -28,6 +28,14 @@ footer {
 	text-align: center;
 }
 
+results {
+	position: auto;
+	background: #efefef;
+	text-align: center;
+	padding: 1rem white;
+	border: 1rem white;
+}
+
 contact_form {
 	color: white; 
 }
