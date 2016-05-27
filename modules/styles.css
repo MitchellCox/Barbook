@@ -26,8 +26,9 @@ footer {
 
 #resultParent {
 	padding-top: 50px;
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: 2%;
+	margin-left: 2%;
+	position: auto;
 }
 
 #result1 {
@@ -35,8 +36,8 @@ footer {
 	position: auto;
 	background-color: white;
 	color: black;
-	width: 350px;
-	height: 350px;
+	width: 375px;
+	height: 375px;
 	text-align: center;
 	margin: 0px 20px 20px 40px;
 }
@@ -46,8 +47,8 @@ footer {
 	position: auto;
 	background-color: white;
 	color: black;
-	width: 350px;
-	height: 350px;
+	width: 375px;
+	height: 375px;
 	text-align: center;
 	margin: 0px 20px 20px 40px;
 }
@@ -57,8 +58,8 @@ footer {
 	position: auto;
 	background-color: white;
 	color: black;
-	width: 350px;
-	height: 350px;
+	width: 375px;
+	height: 375px;
 	text-align: center;
 	margin: 0px 20px 20px 40px;
 }
