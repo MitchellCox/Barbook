@@ -1,5 +1,8 @@
 import React from 'react'
 import favicon from '../favicon.ico'
+import styles from '../styles.css'
+import $ from 'jquery'
+
 const { arrayOf, string, node, object } = React.PropTypes
 const shims = `
  (String.prototype.trim && Function.prototype.bind) || document.write('<script src="/es5-shim.js"><\\/script>');

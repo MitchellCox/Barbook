@@ -7,14 +7,10 @@ body {
 	color: white;
  }
 
-main {
-	flex: 1 0 auto;
- }
-
 form {
 	position: auto;
 	background: #efefef;
-	padding: 5rem;
+	padding: 20px;
 	border: 1rem white;
 }
 
@@ -28,14 +24,41 @@ footer {
 	text-align: center;
 }
 
-results {
-	position: auto;
-	background: #efefef;
-	text-align: center;
-	padding: 1rem white;
-	border: 1rem white;
+#resultParent {
+	padding-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-contact_form {
-	color: white; 
+#result1 {
+	display: block;
+	position: auto;
+	background-color: white;
+	color: black;
+	width: 350px;
+	height: 350px;
+	text-align: center;
+	margin: 0px 20px 20px 40px;
+}
+
+#result2 {
+	display: block;
+	position: auto;
+	background-color: white;
+	color: black;
+	width: 350px;
+	height: 350px;
+	text-align: center;
+	margin: 0px 20px 20px 40px;
+}
+
+#result3 {
+	display: block;
+	position: auto;
+	background-color: white;
+	color: black;
+	width: 350px;
+	height: 350px;
+	text-align: center;
+	margin: 0px 20px 20px 40px;
 }

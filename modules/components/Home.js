@@ -2,6 +2,7 @@ import React from 'react'
 import Title from 'react-title-component'
 import { Button, Icon } from 'react-materialize'
 import $ from 'jquery'
+import { result1, result2, result3, resultParent } from '../styles.css'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class Home extends React.Component {
   }
 
   render() {
+
     return (
       <div>
         <Title render={prev => `${prev} | Home`}/>
@@ -36,11 +38,10 @@ export default class Home extends React.Component {
               <a type="submit" className="waves-effect waves-light btn-flat white">Submit</a>
             </div>
           </form>
-          <div className="divider"></div>
-          <div className="row results">
-            <div className="col s3"> </div>
-            <div className="col s3"> </div>
-            <div className="col s3"> </div>
+          <div id={resultParent} className="row">
+            <div id={result1}className="col s12 l3"> </div>
+            <div id={result2}className="col s12 l3"> </div>
+            <div id={result3}className="col s12 l3"> </div>
           </div>
         </body>
       </div>
