@@ -31,6 +31,7 @@ export default class Home extends React.Component {
       <div>
         <Title render={prev => `${prev} | Home`}/>
         <h2>Welcome, Imbiber</h2>
+        <p>A place where you can create drinks with the ingredients you have at home or anywhere. </p>
         <body>
           <form onSubmit={this.getCocktails}>
             <div className="input-field">
@@ -38,7 +39,7 @@ export default class Home extends React.Component {
               <a type="submit" className="waves-effect waves-light btn-flat white">Submit</a>
             </div>
           </form>
-          <div id={resultParent} className="row">
+          <div id={resultParent} className="center row">
             <div id={result1}className="col s12 l3"> </div>
             <div id={result2}className="col s12 l3"> </div>
             <div id={result3}className="col s12 l3"> </div>

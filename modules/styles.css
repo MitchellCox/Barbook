@@ -12,6 +12,7 @@ form {
 	background: #efefef;
 	padding: 20px;
 	border: 1rem white;
+	opacity: .7;
 }
 
 footer {
@@ -24,10 +25,28 @@ footer {
 	text-align: center;
 }
 
+h2 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+.founder {
+	display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 #resultParent {
 	padding-top: 50px;
-	margin-right: 2%;
-	margin-left: 2%;
+	margin-right: auto;
+	margin-left: auto;
 	position: auto;
 }
 
@@ -40,6 +59,7 @@ footer {
 	height: 375px;
 	text-align: center;
 	margin: 0px 20px 20px 40px;
+	opacity: .7;
 }
 
 #result2 {
@@ -51,6 +71,7 @@ footer {
 	height: 375px;
 	text-align: center;
 	margin: 0px 20px 20px 40px;
+	opacity: .7;
 }
 
 #result3 {
@@ -62,4 +83,5 @@ footer {
 	height: 375px;
 	text-align: center;
 	margin: 0px 20px 20px 40px;
+	opacity: .7;
 }

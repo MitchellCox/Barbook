@@ -3,8 +3,10 @@ let Schema = mongoose.Schema
 
 let Cocktail = new Schema({
 	name: String,
+	image: String,
 	ingredients: [ String ],
-	description: String,
+	description: [ String ], 
+	equipment: [ String ],
 	difficulty: String
 })
 
