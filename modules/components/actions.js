@@ -3,7 +3,7 @@ import $ from 'jquery'
 export const login = (email,pass,redirect, history) => {
   return(dispatch) => {
   $.ajax({
-    url: '/api/signin',
+    url: '/api/auth',
     type: 'POST',
     contentType: 'application/json',
     data: JSON.stringify({ email: email, password: pass })
@@ -23,7 +23,7 @@ export const login = (email,pass,redirect, history) => {
 export const signUp = (email, pass, redirect, history) => {
 	return (dispatch) => {
 		$.ajax({
-			url: 'api/signup',
+			url: 'api/auth',
 			type: 'POST',
 			data: JSON.stringify({ email: email, password: pass })
 		}).done( res => {

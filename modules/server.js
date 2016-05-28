@@ -4,7 +4,12 @@ import { RouterContext } from 'react-router'
 import Document from '../modules/components/Document'
 import routes from '../modules/routes'
 import mongoose from 'mongoose'
+import passport from 'passport'
+import local from 'passport-local'
+import session from 'express-session'
 import User from './models/user'
+
+let LocalStrategy = local.Strategy 
 
 function getApp(req, res, requestCallback) {
   // here is your chance to do things like get an auth token and generate
@@ -23,6 +28,15 @@ function getApp(req, res, requestCallback) {
 }
 
 let server = createServer(getApp)
+// 'secret' is the salt we will use for hashing // ENV vars are ALL CAPS
+server.use(session({ secret: process.env.SECRET, resave: false, saveUnitialized: false }))
+server.use(passport.initialize())
+
+passport.use(new LocalStrategy(User.authenticate()))
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
+
+mongoose.createConnection('mongodb://localhost/barbook-auth')
 
 let mongoUri = process.env.MONGODB_URI ||
   process.env.MONGOHQ_URL ||

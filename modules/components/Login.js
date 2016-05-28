@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Title from 'react-title-component'
 import { login, signUp } from './actions'
 import { connect } from 'react-redux'
+import $ from 'jquery'
 
 class Login extends React.Component {
 	constructor(props) {
   super(props)
   this.signUp = this.signUp.bind(this)
   this.signIn = this.signIn.bind(this)
-  const redirectLocation = '/drink'
+  const redirectLocation = '/bar_book'
   this.state = { error: false, redirectRoute: redirectLocation }
 }
 
@@ -34,8 +35,8 @@ class Login extends React.Component {
         <div className="row">
           <div className="col s12 m6">
             <div className="card blue-grey darken 1"> 
-              <div className="card-content white-text"> 
-                <span className="card-title">Sign Up</span>
+              <div className="card-content blue-grey-text"> 
+                <span className="card-title white-text">Sign Up</span>
                   <div className="row">
                     <form onSubmit={this.signUp}>
                       <div className="row">
@@ -64,8 +65,8 @@ class Login extends React.Component {
           <div className="row">
             <div className="col s12 m6">
               <div className="card blue-grey darken 1"> 
-                <div className="card-content white-text"> 
-                  <span className="card-title">Sign In</span>
+                <div className="card-content blue-grey-text"> 
+                  <span className="card-title white-text">Sign In</span>
                     <form onSubmit={this.signIn}>
                       <div className="row">
                         <div className="input-field col-s12"> 

@@ -32,8 +32,8 @@ export default class Home extends React.Component {
         <body>
           <form onSubmit={this.getCocktails}>
             <div className="input-field">
-              <input required={true} ref="ingredients" id="search" type="search" className="material-icons" placeholder="What ingredients do you have? Separate ingredients with commas." />
-              <a type="submit" className="waves-effect waves-light btn-flat white">Submit</a>
+              <input required={true} ref="ingredients" id="search" type="search" className="material-icons blue-grey-text" placeholder="What ingredients do you have? Separate ingredients with commas." />
+              <a type="submit" className="waves-effect waves-light btn-flat white blue-grey-text">Submit</a>
             </div>
           </form>
           <div>

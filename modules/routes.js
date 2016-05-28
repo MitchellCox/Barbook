@@ -1,6 +1,6 @@
 import '../modules/styles.css'
 import React from 'react'
-import { Route, IndexRoute } from 'react-router'
+import { Route, IndexRoute, Redirect } from 'react-router'
 import { ServerRoute } from 'react-project'
 import App from './components/App'
 import Home from './components/Home'
@@ -31,8 +31,8 @@ export default (
       <Route path="bar_book" component={Bar_Book}/> 
     </Route>
     <ServerRoute path="/api">
-      <ServerRoute path="signup" post={signUp}/>
-      <ServerRoute path="signin" post={signIn}/>
+      <ServerRoute path="auth" post={signUp}/>
+      <ServerRoute path="auth" post={signIn}/>
       <ServerRoute path="cocktail" get={getCocktail} post={createCocktail} />
     </ServerRoute>
     <Route path="*" status={404} component={NoMatch}/>

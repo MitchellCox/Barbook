@@ -41,6 +41,25 @@ class App extends React.Component {
                   ) : (<a href="/login">Sign in</a>)} 
                 </li>
               </ul>
+              <ul className="side-nav"> 
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li>
+                  {this.props.auth ? (
+                    <a href="#"
+                      onClick= { e => {
+                        {
+                          e.preventDefault()
+                          this.props.dispatch(logout())
+                          this.props.history.push('/login')
+                        }
+                      }}
+                    >
+                      Log out
+                    </a>
+                  ) : (<a href="/login">Sign in</a>)} 
+                </li>
+              </ul>
             </div>
           </nav>
         </div>

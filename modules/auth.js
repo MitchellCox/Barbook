@@ -22,7 +22,7 @@ module.exports = {
     })
   },
 
-  npmsignUp(email, pass, cb) {
+  signUp(email, pass, cb) {
    cb = arguments[arguments.length - 1]
    signUpRequest(email, pass, (res) => {
      if (res.authenticated) {
