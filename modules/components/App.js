@@ -1,9 +1,9 @@
 import React from 'react'
-import { IndexLink } from 'react-router'
 import { connect } from 'react-redux'
 import { logout, loggedIn } from './actions'
-import $ from 'jquery'
 import { Button, Icon } from 'react-materialize'
+import Title from 'react-title-component'
+import { Link } from 'react-router'
 
 class App extends React.Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class App extends React.Component {
                     >
                       Log out
                     </a>
-                  ) : (<a href="/login">Sign in</a>)} 
+                  ) : (<a href="/login">Sign In</a>)} 
                 </li>
               </ul>
             </div>

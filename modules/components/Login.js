@@ -1,32 +1,32 @@
-import React from 'react'
-import Title from 'react-title-component'
+import React, { Component } from 'react'
 import { login, signUp } from './actions'
 import { connect } from 'react-redux'
 
-class Login extends React.Component {
-	constructor(props) {
-  super(props)
-  this.signUp = this.signUp.bind(this)
-  this.signIn = this.signIn.bind(this)
-  const redirectLocation = '/drink'
-  this.state = { error: false, redirectRoute: redirectLocation }
-}
+class Login extends Component {
+  constructor(props) {
+    super(props)
+    this.signUp = this.signUp.bind(this)
+    this.signIn = this.signIn.bind(this)
+    const redirectLocation = '/dashboard'
+    this.state = { error: false, redirectRoute: redirectLocation }
+  }
 
-	signUp(event) {
-  event.preventDefault()
+  signUp(event) {
+    event.preventDefault()
 
-  const email = this.refs.newEmail.value
-  const pass = this.refs.newPass.value
-  this.props.dispatch(signUp(email, pass, this.props.redirectRoute, this.props.history))
-	}
+    const email = this.refs.newEmail.value
+    const pass = this.refs.newPass.value
+    this.props.dispatch(signUp(email, pass, this.state.redirectRoute, this.props.history))
+  }
 
-	signIn(event) {
-  event.preventDefault()
+  signIn(event) {
+    event.preventDefault()
 
-  const email = this.refs.email.value
-  const pass = this.refs.pass.value
-  this.props.dispatch(login(email, pass, this.props.redirectRoute, this.props.history))
-	}
+    const email = this.refs.email.value
+    const pass = this.refs.pass.value
+    this.props.dispatch(login(email, pass, this.state.redirectRoute, this.props.history))
+  }
+
   
   render() {
     return (
@@ -98,4 +98,3 @@ class Login extends React.Component {
 }
 
 export default connect()(Login)
-

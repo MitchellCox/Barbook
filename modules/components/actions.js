@@ -39,12 +39,8 @@ export const signUp = (email, pass, redirect, history) => {
 	}
 }
 
-const getToken = () => {
-	return Math.random().toString(36).substring(7)
-}
-
 export const logout = () => {
-	return {
+	return{
 		type: 'USER_LOGGED_OUT'
 	}
 }
@@ -52,22 +48,12 @@ export const logout = () => {
 export const loggedIn = (id, token) => {
 	return {
 		type: 'USER_LOGGED_IN',
-		id,
-		token
+    id,
+    token
 	}
 }
 
-/* export const addSearch = (text) => {
-	return(dispatch) => {
-		fetch('/api/search',
-		{
-			method: 'POST',
-			body: JSON.stringify({ text: text })
-		}
-		)
-		.then( res => res.json())
-		.then( json => dispatch(search('ADD_SEARCH', JSON)))
-	}
+const getToken = () => {
+	return Math.random().toString(36).substring(7)
+}
 
-} */
-	 

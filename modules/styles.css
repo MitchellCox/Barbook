@@ -33,6 +33,10 @@ p {
 	text-align: center;
 }
 
+div {
+	font-family: Arial;
+}
+
 .founder {
 	display: inline-block;
   width: 150px;
