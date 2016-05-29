@@ -28,6 +28,8 @@ function getApp(req, res, requestCallback) {
 
 let server = createServer(getApp)
 
+mongoose.createConnection('mongodb://localhost/barbook-auth')
+
 server.use( session({ secret: 'secret', saveUninitialized: true, resave: true }))
 server.use(passport.initialize())
 
@@ -39,7 +41,7 @@ let mongoUri = process.env.MONGODB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/barbook'
 
-mongoose.connect('mongodb://localhost/auth-3')
-mongoose.connect(mongoUri)
+mongoose.createConnection('mongodb://localhost/auth-3')
+mongoose.createConnection(mongoUri)
 
 server.start()
