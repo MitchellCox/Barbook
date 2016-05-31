@@ -8,27 +8,7 @@ export default React.createClass({
       <div>
         <Title render={prev => `${prev} | About`}/>
         <h2>About</h2>
-<<<<<<< HEAD
-        <p>BarBook is creating a community of cocktail enthusiasts who want to learn about cocktails, connect with others, and share their creations.</p>
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
-        <br/> 
 
-=======
       	<body>
           <div className="row">
            <div className="col s7 push-s5">
@@ -36,12 +16,19 @@ export default React.createClass({
               </span>
            </div>
            <div className="col s5 pull-s7">
-              <div className={founder}></div>
-              <div className={founder}></div>
+              <div className={founder}>
+                <img src="../../static/Images/Mitchell" />
+                <h5>Mitchell Cox</h5>
+                <p>Front-End Developer, Fitness Enthusiast</p>
+              </div>
+              <div className={founder}>
+                <img src="../../static/Images/Diane" />
+                <h5> Diane Tran</h5>
+                <p>Sr. Software Engineer, Aspiring Cafe Owner</p>
+              </div>
            </div>
           </div>        
       	</body>
->>>>>>> 403a32b6793dc2b42e2d6b605ef057e94d66378d
       </div>
     )
   }

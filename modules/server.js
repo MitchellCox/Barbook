@@ -8,12 +8,8 @@ import passport from 'passport'
 import local from 'passport-local'
 import session from 'express-session'
 import User from './models/user'
-import passport from 'passport'
-import session from 'express-session'
-import local from 'passport-local'
-let LocalStrategy = local.Strategy
 
-let LocalStrategy = local.Strategy 
+let LocalStrategy = local.Strategy
 
 function getApp(req, res, requestCallback) {
   // here is your chance to do things like get an auth token and generate
