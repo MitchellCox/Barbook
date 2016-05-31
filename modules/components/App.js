@@ -4,6 +4,7 @@ import { logout, loggedIn } from './actions'
 import { Button, Icon } from 'react-materialize'
 import Title from 'react-title-component'
 import { Link } from 'react-router'
+import $ from 'jquery'
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,10 @@ class App extends React.Component {
   componentWillMount() {
     if (sessionStorage.token && !this.props.auth)
       this.props.dispatch(loggedIn(sessionStorage.userId, sessionStorage.token))
+  }
+
+  componentDidMount() {
+    $('.button-collapse').sideNav()
   }
 
   render() {
@@ -27,7 +32,7 @@ class App extends React.Component {
                 <li><a href="/contact">Contact</a></li>
                 <li>
                   {this.props.auth ? (
-                    <a href="#"
+                    <a href="/"
                       onClick= { e => {
                         {
                           e.preventDefault()
@@ -36,11 +41,12 @@ class App extends React.Component {
                         }
                       }}
                     >
-                      Log out
+                      Sign Out
                     </a>
-                  ) : (<a href="/login">Sign In</a>)} 
+                  ) : (<a href="/login">Bar Book</a>)} 
                 </li>
               </ul>
+              <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <ul className="side-nav"> 
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>

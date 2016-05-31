@@ -38,15 +38,6 @@ passport.deserializeUser(User.deserializeUser())
 
 mongoose.createConnection('mongodb://localhost/barbook-auth')
 
-mongoose.createConnection('mongodb://localhost/barbook-auth')
-
-server.use( session({ secret: 'secret', saveUninitialized: true, resave: true }))
-server.use(passport.initialize())
-
-passport.use(new LocalStrategy(User.authenticate()))
-passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser())
-
 let mongoUri = process.env.MONGODB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/barbook'
