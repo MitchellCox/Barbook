@@ -5,30 +5,31 @@ module.exports = {
     cb = arguments[arguments.length - 1]
     if (localStorage.token) {
       if (cb) cb(true)
-      this.onChange(true)
+        this.onChange(true)
       return
     }
 
-    signInRequest(email, pass, (res) => {
-      if (res.authenticated) {
+  signInRequest(email, pass, (res) => {
+    if (res.authenticated) {
       localStorage.token = res.token
       localStorage.id = res.id
-      if (cb) cb(true)
+    if (cb) cb(true)
       this.onChange(true)
     } else {
       if (cb) cb(false)
-      this.onChange(false)
-    }
-    })
-  },
+        this.onChange(false)
+      }
+   })
+ },
 
-  signUp(email, pass, cb) {
+
+ signUp(email, pass, cb) {
    cb = arguments[arguments.length - 1]
    signUpRequest(email, pass, (res) => {
      if (res.authenticated) {
        localStorage.token = res.token
        localStorage.id = res.id
-       if (cb) cb(true)
+     if (cb) cb(true)
        this.onChange(true)
      } else {
        if (cb) cb(false)
@@ -37,27 +38,27 @@ module.exports = {
    })
  },
 
-  getToken() {
+ getToken() {
    return localStorage.token
-  },
+ },
 
-  getId() {
+ getId() {
    return localStorage.id
-  },
+ },
 
-  logout(cb) {
+ logout(cb) {
    delete localStorage.token
    delete localStorage.id
    if (cb) cb()
-   this.onChange(false)
+     this.onChange(false)
    location.pathname = '/'
-  },
+ },
 
-  loggedIn() {
+ loggedIn() {
    return !!localStorage.token
-  },
+ },
 
-  onChange() {}
+ onChange() {}
 }
 
 function signUpRequest(email, pass, cb) {

@@ -8,6 +8,10 @@ import passport from 'passport'
 import local from 'passport-local'
 import session from 'express-session'
 import User from './models/user'
+import passport from 'passport'
+import session from 'express-session'
+import local from 'passport-local'
+let LocalStrategy = local.Strategy
 
 let LocalStrategy = local.Strategy 
 
@@ -38,10 +42,20 @@ passport.deserializeUser(User.deserializeUser())
 
 mongoose.createConnection('mongodb://localhost/barbook-auth')
 
+mongoose.createConnection('mongodb://localhost/barbook-auth')
+
+server.use( session({ secret: 'secret', saveUninitialized: true, resave: true }))
+server.use(passport.initialize())
+
+passport.use(new LocalStrategy(User.authenticate()))
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
+
 let mongoUri = process.env.MONGODB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/barbook'
 
-mongoose.connect(mongoUri)
+mongoose.createConnection('mongodb://localhost/auth-3')
+mongoose.createConnection(mongoUri)
 
 server.start()

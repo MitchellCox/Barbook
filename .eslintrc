@@ -10,7 +10,8 @@
     "indent": 0,
     "no-unused-vars": 0,
     "no-mixed-spaces-and-tabs": 1,
-    "no-console": 1
+    "no-console": 1,
+    "no-debugger": 1,
   },
   "plugins": [
     "react"

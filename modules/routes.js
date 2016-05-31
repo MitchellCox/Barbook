@@ -28,7 +28,7 @@ export default (
       <Route path="about" component={About}/>
       <Route path="contact" component={Contact}/>
       <Route path="login" component={Login}/>
-      <Route path="bar_book" component={Bar_Book}/> 
+      <Route path="bar_book" component={UserIsAuthenticated(Bar_Book)}/> 
     </Route>
     <ServerRoute path="/api">
       <ServerRoute path="auth" post={signUp}/>

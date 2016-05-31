@@ -13,21 +13,20 @@ class Login extends React.Component {
   this.state = { error: false, redirectRoute: redirectLocation }
 }
 
-	signUp(event) {
-  event.preventDefault()
+  signUp(event) {
+    event.preventDefault()
+    const email = this.refs.newEmail.value
+    const pass = this.refs.newPass.value
+    this.props.dispatch(signUp(email, pass, this.state.redirectRoute, this.props.history))
+  }
 
-  const email = this.refs.newEmail.value
-  const pass = this.refs.newPass.value
-  this.props.dispatch(signUp(email, pass, this.props.redirectRoute, this.props.history))
-	}
+  signIn(event) {
+    event.preventDefault()
+    const email = this.refs.email.value
+    const pass = this.refs.pass.value
+    this.props.dispatch(login(email, pass, this.state.redirectRoute, this.props.history))
+  }
 
-	signIn(event) {
-  event.preventDefault()
-
-  const email = this.refs.email.value
-  const pass = this.refs.pass.value
-  this.props.dispatch(login(email, pass, this.props.redirectRoute, this.props.history))
-	}
   
   render() {
     return (
@@ -99,4 +98,3 @@ class Login extends React.Component {
 }
 
 export default connect()(Login)
-
