@@ -59,13 +59,17 @@ export default class Home extends React.Component {
     return (
       <div>
         <Title render={prev => `${prev} | Home`}/>
-        <h2>Welcome, Imbiber</h2>
-        <p>A place where you can create drinks with the ingredients you have at home or anywhere. </p>
+        <br/>
+        <br/>
+        <h2>Discover your drink.</h2>
+        <br/>
+        <br/>
         <body>
           <form onSubmit={(e) => this.getCocktails(e)}>
             <div className="input-field">
-              <input required={true} ref="ingredients" id="search" className="blue-grey-text" placeholder="What ingredients do you have? Separate ingredients with commas." />
-              <button type="submit" className="waves-effect waves-light btn-flat blue-grey-text">Submit</button>
+              <p className="blue-grey-text">What ingredients do you have? Separate ingredients with commas.</p> 
+              <input required={true} ref="ingredients" id="search" className="material-icon blue-grey-text" />
+              <button type="submit" className="waves-effect waves-light btn-flat blue-grey white-text">Submit</button>
             </div>
           </form>
           <div id={resultParent} className="center row">
@@ -75,7 +79,6 @@ export default class Home extends React.Component {
             {/*<div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
             <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
             <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>*/}
-          </div>
           <ReactPaginate 
              previousLabel={"previous"}
              nextLabel={"next"}
@@ -87,6 +90,8 @@ export default class Home extends React.Component {
              containerClassName={"pagination"}
              subContainerClassName={"pages pagination"}
              activeClassName={"active"} />
+           </div>
+
         </body>
       </div>
     )

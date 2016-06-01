@@ -42,8 +42,16 @@ div {
   height: 150px;
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
+  align-content: center;
+}
+
+.founder_img {
+  width: 300px;
+  height: 400px;
+  right: 50px;
+  left: 50px;
 }
 
 #resultParent {
@@ -65,3 +73,11 @@ div {
 	opacity: .7;
 }
 
+.loginCard {
+	display: inline-block;
+  width: 200px;
+}
+
+.greyPlaceholder {
+	color: red;
+}

@@ -3,6 +3,7 @@ import Title from 'react-title-component'
 import { login, signUp } from './actions'
 import { connect } from 'react-redux'
 import $ from 'jquery'
+import { loginCard } from '../styles.css'
 
 class Login extends React.Component {
 	constructor(props) {
@@ -31,11 +32,16 @@ class Login extends React.Component {
   render() {
     return (
       <div>
+        <br/>
+        <br/>
+        <h4 className="center">Create an account and discover your drink.</h4> 
+        <br/> 
+        <br/>
         <div className="row">
-          <div className="col s12 m6">
+          <div className="col s12">
             <div className="card blue-grey darken 1"> 
               <div className="card-content blue-grey-text"> 
-                <span className="card-title white-text">Sign Up</span>
+                <h4 className="card-title white-text">Sign Up</h4>
                   <div className="row">
                     <form onSubmit={this.signUp}>
                       <div className="row">
@@ -50,9 +56,9 @@ class Login extends React.Component {
                           <label for="password" placeholder="Password">Password</label>
                         </div>
                       </div>
-                      <div>
+                      <div className="row">
                         <div className="input-field col s12">
-                          <input className="btn" type="submit" />
+                          <input className="btn" type="submit"/> 
                         </div> 
                       </div>        
                     </form>
@@ -60,41 +66,40 @@ class Login extends React.Component {
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
+
           <div className="row">
-            <div className="col s12 m6">
-              <div className="card blue-grey darken 1"> 
+            <div className="col s12">
+              <div className="card blue-grey darken 1 loginCard"> 
                 <div className="card-content blue-grey-text"> 
-                  <span className="card-title white-text">Sign In</span>
-                    <form onSubmit={this.signIn}>
-                      <div className="row">
-                        <div className="input-field col-s12"> 
-                          <input id="email" type="email" className="validate" ref="email"/>
-                          <label for="email" placeholder="Email">Email</label>
+                  <h4 className="card-title white-text">Sign In</h4>
+                    <div className="row">
+                      <form onSubmit={this.signIn}>
+                        <div className="row">
+                          <div className="input-field col-s12"> 
+                            <input id="email" type="email" className="validate" ref="newEmail"/>
+                            <label for="email" placeholder="Email">Email</label>
+                          </div>
                         </div>
-                      </div>
-                      <div className="row">
-                        <div className="input-field col-s12"> 
-                          <input id="password" type="password" className="validate" ref="pass"/>
-                          <label for="password" placeholder="Password">Password</label>
+                        <div className="row">
+                          <div className="input-field col-s12"> 
+                            <input id="password" type="password" className="validate" ref="newPass"/>
+                            <label for="password" placeholder="Password">Password</label>
+                          </div>
                         </div>
-                      </div>
-                      <div>
-                        <div className="input-field col s12">
-                          <input className="btn" type="submit"/>
-                          {this.state.error && (
-                             <p>Bad login information</p>
-                           )}
-                        </div> 
-                      </div>        
-                    </form>
-                  </div> 
+                        <div className="row">
+                          <div className="input-field col s12">
+                            <input className="btn" type="submit"/> 
+                          </div> 
+                        </div>            
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>  
+            </div> 
+          </div>
    )
   }
 }
-
 export default connect()(Login)

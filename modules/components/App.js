@@ -29,7 +29,6 @@ class App extends React.Component {
               <a href="/" className="brand-logo text-color grey-lighten 4">BarBook</a>
               <ul className="right hide-on-med-and-down">
                 <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
                 <li>
                   {this.props.auth ? (
                     <a href="/login"
@@ -76,7 +75,7 @@ class App extends React.Component {
           <footer className="page-footer blue-grey darken 1">
             <div className="footer-copyright">
               <div className="container">
-                © 2016 BarBook
+                © 2016 BarBook | Discover your drink. 
               </div>
             </div>
           </footer>
