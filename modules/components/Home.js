@@ -25,9 +25,6 @@ export default class Home extends React.Component {
     e.preventDefault()
     let ingredients = this.refs.ingredients.value.split(',')
     let visible = []
-    //let image = this.refs.image.value
-    //let description = this.refs.description.value
-    //let equipment = this.refs.equipment.value
  
     this.state.cocktails.map( cocktail => {
       let match = 0
@@ -68,7 +65,7 @@ export default class Home extends React.Component {
           <form onSubmit={(e) => this.getCocktails(e)}>
             <div className="input-field">
               <input required={true} ref="ingredients" id="search" type="search" className="material-icons blue-grey-text" placeholder="What ingredients do you have? Separate ingredients with commas." />
-              <button type="submit" className="waves-effect waves-light btn-flat white blue-grey-text">Submit</button>
+              <button type="submit" className="waves-effect waves-light btn blue-grey-text">Submit</button>
             </div>
           </form>
           <div id={resultParent} className="center row">
