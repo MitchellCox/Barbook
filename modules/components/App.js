@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    $('.button-collapse').sideNav()
+    window.$('.button-collapse').sideNav()
   }
 
   render() {

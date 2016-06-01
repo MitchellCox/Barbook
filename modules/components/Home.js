@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Title from 'react-title-component'
-import { Button, Icon } from 'react-materialize'
+import { Button, Icon, Input } from 'react-materialize'
 import $ from 'jquery'
 import { resultCard, resultParent } from '../styles.css'
 import ReactPaginate from 'react-paginate'
@@ -64,8 +64,8 @@ export default class Home extends React.Component {
         <body>
           <form onSubmit={(e) => this.getCocktails(e)}>
             <div className="input-field">
-              <input required={true} ref="ingredients" id="search" type="search" className="material-icons blue-grey-text" placeholder="What ingredients do you have? Separate ingredients with commas." />
-              <button type="submit" className="waves-effect waves-light btn blue-grey-text">Submit</button>
+              <input required={true} ref="ingredients" id="search" className="blue-grey-text" placeholder="What ingredients do you have? Separate ingredients with commas." />
+              <button type="submit" className="waves-effect waves-light btn-flat blue-grey-text">Submit</button>
             </div>
           </form>
           <div id={resultParent} className="center row">
