@@ -1,11 +1,13 @@
 import Cocktail from '../models/cocktail'
 
 export function getCocktail(req, res) {
-	let query = Cocktail.find({})
-  query.where('userId', req.query.id )
-  query.exec( function (err, cocktail) {
-    res.json(cocktail)
-	})
+	Cocktail.find( {}, ( err, cocktails ) => {
+		if (err) {
+			return res.status(500).json(err)
+		} else {
+ 		  return res.json(cocktails)
+ 		}
+  })
 }
 
 export function createCocktail(req, res) {

@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import Title from 'react-title-component'
 import { Button, Icon } from 'react-materialize'
 import $ from 'jquery'
-import { result1, result2, result3, resultParent } from '../styles.css'
+import { resultCard, resultParent } from '../styles.css'
+import ReactPaginate from 'react-paginate'
 
 export default class Home extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { ingredients: [], visible: [] }
+    this.state = { ingredients: [], visible: [], pageNum: 0, paginated: [], cocktails: [] }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     $.ajax({
       url: '/api/cocktail',
       type: 'GET',
@@ -24,6 +25,7 @@ export default class Home extends React.Component {
     e.preventDefault()
     let ingredients = this.refs.ingredients.value.split(',')
     let visible = []
+ 
     this.state.cocktails.map( cocktail => {
       let match = 0
       for (let ingredient of [ ... new Set(ingredients) ] ) {
@@ -35,29 +37,26 @@ export default class Home extends React.Component {
       if (match >= 2)
         visible.push({ cocktail: cocktail, matches: match })
     })
+   
+    let sortedVisible = visible.sort( (a, b) => (b.matches / b.cocktail.ingredients.length) - (a.matches / a.cocktail.ingredients.length) )
 
-    this.setState({ visible: visible.sort( (a, b) => (b.matches / b.cocktail.ingredients.length) - (a.matches / a.cocktail.ingredients.length) ) })
-    // $.ajax({
-    //   url: '/api/cocktail',
-    //   type: 'GET',
-    //   contentType: 'application/json',
-    //   data: { ingredients }
-    // }).done(cocktails => { 
-    //   debugger
-    //   this.setState ({ cocktails: cocktails
-    //   }).fail( () => {
-    //     this.props.history.push ('./components/NoMatch')
-    //   }) 
-    // })
+    this.setState({ paginated: sortedVisible.slice(0,6), pageNum: Math.ceil((visible.length) / 6), visible: sortedVisible })
+  }
+
+  handlePageClick(data) {
+    let start = data.selected === 0 ? 0 : (data.selected  * 6)
+    let end = (start + 6) > this.state.visible.length ? this.state.visible.length : (start + 6)
+    let paginated = this.state.visible.slice(start, end)
+    this.setState({ paginated: paginated })
   }
 
   render() {
-   let visible = this.state.visible.map( res => {
-      return(<li key={res.cocktail._id}>{res.cocktail.name}</li>)
+   let paginated = this.state.paginated.map( res => {
+      return(<li key={res.cocktail._id}><image src={res.cocktail.image} />{res.cocktail.name}</li>)
     })
 
+
     return (
-     
       <div>
         <Title render={prev => `${prev} | Home`}/>
         <h2>Welcome, Imbiber</h2>
@@ -66,17 +65,28 @@ export default class Home extends React.Component {
           <form onSubmit={(e) => this.getCocktails(e)}>
             <div className="input-field">
               <input required={true} ref="ingredients" id="search" type="search" className="material-icons blue-grey-text" placeholder="What ingredients do you have? Separate ingredients with commas." />
-              <a type="submit" className="waves-effect waves-light btn-flat white blue-grey-text">Submit</a>
+              <button type="submit" className="waves-effect waves-light btn-flat white blue-grey-text">Submit</button>
             </div>
           </form>
           <div id={resultParent} className="center row">
             <ul>
-             {visible}
+              {paginated}
             </ul>
-            <div id={result1}className="col s12 l3"> </div>
-            <div id={result2}className="col s12 l3"> </div>
-            <div id={result3}className="col s12 l3"> </div>
+            {/*<div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
+            <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
+            <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>*/}
           </div>
+          <ReactPaginate 
+             previousLabel={"previous"}
+             nextLabel={"next"}
+             breakLabel={<a href="">...</a>}
+             pageNum={this.state.pageNum}
+             marginPagesDisplayed={2}
+             pageRangeDisplayed={5}
+             clickCallback={this.handlePageClick.bind(this)}
+             containerClassName={"pagination"}
+             subContainerClassName={"pages pagination"}
+             activeClassName={"active"} />
         </body>
       </div>
     )

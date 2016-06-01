@@ -82,6 +82,9 @@ class Login extends React.Component {
                       <div>
                         <div className="input-field col s12">
                           <input className="btn" type="submit"/>
+                          {this.state.error && (
+                             <p>Bad login information</p>
+                           )}
                         </div> 
                       </div>        
                     </form>
@@ -89,10 +92,7 @@ class Login extends React.Component {
                 </div>
               </div>
             </div>
-          {this.state.error && (
-            <p>Bad login information</p>
-          )}
-      </div>  
+          </div>  
    )
   }
 }

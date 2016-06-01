@@ -71,14 +71,8 @@ export default class Bar_Book extends React.Component {
 						        </thead>
 						        <tbody>
 						          <tr>
-						            <td>Vodka Tonic</td>
-						            <td>Simple</td>
-						            <td>XX/XX/XXXX</td>
-						            <td>Great drink!</td> 
+						            {cocktails}
 						          </tr>
-						          <ul>
-						          	{cocktails}
-						          </ul>
 						        </tbody>
 					      	</table>
 			      	</div>

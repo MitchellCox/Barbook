@@ -32,7 +32,7 @@ class App extends React.Component {
                 <li><a href="/contact">Contact</a></li>
                 <li>
                   {this.props.auth ? (
-                    <a href="/"
+                    <a href="/login"
                       onClick= { e => {
                         {
                           e.preventDefault()
@@ -43,7 +43,7 @@ class App extends React.Component {
                     >
                       Sign Out
                     </a>
-                  ) : (<a href="/login">Bar Book</a>)} 
+                  ) : (<a href="/login">Sign In</a>)} 
                 </li>
               </ul>
               <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
