@@ -25,6 +25,9 @@ export default class Home extends React.Component {
     e.preventDefault()
     let ingredients = this.refs.ingredients.value.split(',')
     let visible = []
+    //let image = this.refs.image.value
+    //let description = this.refs.description.value
+    //let equipment = this.refs.equipment.value
  
     this.state.cocktails.map( cocktail => {
       let match = 0

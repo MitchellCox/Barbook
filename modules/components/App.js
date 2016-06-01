@@ -63,7 +63,7 @@ class App extends React.Component {
                     >
                       Log out
                     </a>
-                  ) : (<a href="/login">Sign in</a>)} 
+                  ) : (<a href="/login">Sign In</a>)} 
                 </li>
               </ul>
             </div>

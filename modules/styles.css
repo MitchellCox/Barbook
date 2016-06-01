@@ -53,7 +53,7 @@ div {
 	position: auto;
 }
 
-#result1 {
+.resultCard {
 	display: block;
 	position: auto;
 	background-color: white;
@@ -65,26 +65,3 @@ div {
 	opacity: .7;
 }
 
-#result2 {
-	display: block;
-	position: auto;
-	background-color: white;
-	color: black;
-	width: 375px;
-	height: 375px;
-	text-align: center;
-	margin: 0px 20px 20px 40px;
-	opacity: .7;
-}
-
-#result3 {
-	display: block;
-	position: auto;
-	background-color: white;
-	color: black;
-	width: 375px;
-	height: 375px;
-	text-align: center;
-	margin: 0px 20px 20px 40px;
-	opacity: .7;
-}
