@@ -29,7 +29,7 @@ class App extends React.Component {
         <div>
            <nav>
             <div className="nav-wrapper blue-grey darken 1 text-color grey-lighten 4">
-              <a href="#!" className="brand-logo text-color grey-lighten 4">BarBook</a>
+              <a href="#!" className="brand-logo text-color grey-lighten 4 center">BarBook</a>
               <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <ul className="right hide-on-med-and-down">
                 <li><a href="/about">About</a></li>
@@ -85,7 +85,7 @@ class App extends React.Component {
           <footer className="page-footer blue-grey darken 1">
             <div className="footer-copyright">
               <div className="container">
-                <a className="grey-text text-lighten-4 center">© 2014 Copyright Text | Discover your drink. </a>
+                <a className="grey-text text-lighten-4 center"> 2016 BarBook | Discover your drink. </a>
               </div>
             </div>
           </footer>
