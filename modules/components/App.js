@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    window.$(".button-collapse").sideNav();
+    window.$('.button-collapse').sideNav()
   }
 
   render() {
@@ -82,15 +82,13 @@ class App extends React.Component {
         <br/>
         <br/>
         <br/>
-        <div className="footer">
-          <footer className="page-footer blue-grey darken 1" id="topmarg">
+          <footer className="page-footer blue-grey darken 1">
             <div className="footer-copyright">
               <div className="container">
-                © 2016 BarBook | Discover your drink. 
+                <a className="grey-text text-lighten-4 center">© 2014 Copyright Text | Discover your drink. </a>
               </div>
             </div>
           </footer>
-        </div> 
       </div>
     )
   }

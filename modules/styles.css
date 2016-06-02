@@ -28,6 +28,12 @@ h2 {
 	text-align: center;
 }
 
+h3 {
+	text-align: center;
+	color: black;
+	font-size: medium;
+}
+
 p {
 	text-align: center;
 }
@@ -57,13 +63,4 @@ div {
   right: 50px;
   left: 50px;
 }
-
-#resultParent {
-	padding-top: 50px;
-	margin-right: auto;
-	margin-left: auto;
-	position: auto;
-}
-
-
 
