@@ -67,8 +67,8 @@ export default class Home extends React.Component {
       return(
         <Col s={12} m={4}>
           <Card 
-            style={{ height: '475px'}}
-            header={<CardTitle reveal image={res.cocktail.image} waves="light"/>}
+            style={{ height: '475px' }}
+            header={ <CardTitle reveal image={res.cocktail.image} waves="light"/> }
             title={res.cocktail.name}
             reveal={
               <div>

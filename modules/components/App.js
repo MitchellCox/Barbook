@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { logout, loggedIn } from './actions'
 import { Button, Icon } from 'react-materialize'
+import Materialize from 'materialize'
 import Title from 'react-title-component'
 import { Link } from 'react-router'
 import $ from 'jquery'
@@ -19,53 +20,53 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    window.$('.button-collapse').sideNav()
+    window.$(".button-collapse").sideNav();
   }
 
   render() {
     return (
       <div>
         <div>
-          <nav className="navbar-fixed">
+           <nav>
             <div className="nav-wrapper blue-grey darken 1 text-color grey-lighten 4">
-              <a href="/" className="brand-logo text-color grey-lighten 4">BarBook</a>
+              <a href="#!" className="brand-logo text-color grey-lighten 4">BarBook</a>
+              <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <ul className="right hide-on-med-and-down">
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li>
-                  {this.props.auth ? (
-                    <a href="/login"
-                      onClick= { e => {
-                        {
-                          e.preventDefault()
-                          this.props.dispatch(logout())
-                          this.props.history.push('/login')
-                        }
-                      }}
-                    >
-                      Sign Out
-                    </a>
-                  ) : (<a href="/login">Sign In</a>)} 
+                          {this.props.auth ? (
+                            <a href="/login"
+                              onClick= { e => {
+                                {
+                                  e.preventDefault()
+                                  this.props.dispatch(logout())
+                                  this.props.history.push('/login')
+                                }
+                              }}
+                            >
+                              Sign Out
+                            </a>
+                          ) : (<a href="/login">Sign In</a>)} 
                 </li>
               </ul>
-              <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
-              <ul className="side-nav"> 
+              <ul className="side-nav blue-grey darken 1 text-color grey-lighten 4" id="mobile-demo">
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li>
-                  {this.props.auth ? (
-                    <a href="#"
-                      onClick= { e => {
-                        {
-                          e.preventDefault()
-                          this.props.dispatch(logout())
-                          this.props.history.push('/login')
-                        }
-                      }}
-                    >
-                      Log out
-                    </a>
-                  ) : (<a href="/login">Sign In</a>)} 
+                          {this.props.auth ? (
+                            <a href="/login"
+                              onClick= { e => {
+                                {
+                                  e.preventDefault()
+                                  this.props.dispatch(logout())
+                                  this.props.history.push('/login')
+                                }
+                              }}
+                            >
+                              Sign Out
+                            </a>
+                          ) : (<a href="/login">Sign In</a>)} 
                 </li>
               </ul>
             </div>
