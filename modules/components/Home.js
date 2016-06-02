@@ -25,6 +25,10 @@ export default class Home extends React.Component {
     e.preventDefault()
     let ingredients = this.refs.ingredients.value.split(',')
     let visible = []
+    //let image = this.refs.image.value
+    //let description = this.refs.description.value
+    //let equipment = this.refs.equipment.value
+
  
     this.state.cocktails.map( cocktail => {
       let match = 0
@@ -79,6 +83,7 @@ export default class Home extends React.Component {
             {/*<div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
             <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
             <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>*/}
+          </div>
           <ReactPaginate 
              previousLabel={"previous"}
              nextLabel={"next"}
@@ -90,8 +95,6 @@ export default class Home extends React.Component {
              containerClassName={"pagination"}
              subContainerClassName={"pages pagination"}
              activeClassName={"active"} />
-           </div>
-
         </body>
       </div>
     )
