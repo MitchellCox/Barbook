@@ -33,9 +33,18 @@ const Document = React.createClass({
           {styles}
         </head>
         <body>
-          <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
-          <script dangerouslySetInnerHTML={{ __html: shims }}/>
-          {scripts}
+          <main>
+            <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
+            <script dangerouslySetInnerHTML={{ __html: shims }}/>
+            {scripts}
+          </main>
+          <footer className="page-footer blue-grey darken 1">
+            <div className="footer-copyright">
+              <div className="container">
+                <a className="grey-text text-lighten-4 center"> 2016 BarBook | Discover your drink. </a>
+              </div>
+            </div>
+          </footer>
         </body>
       </html>
     )

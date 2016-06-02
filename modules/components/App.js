@@ -75,20 +75,6 @@ class App extends React.Component {
         <div>
           {this.props.children} 
         </div> 
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-          <footer className="page-footer blue-grey darken 1">
-            <div className="footer-copyright">
-              <div className="container">
-                <a className="grey-text text-lighten-4 center"> 2016 BarBook | Discover your drink. </a>
-              </div>
-            </div>
-          </footer>
       </div>
     )
   }
