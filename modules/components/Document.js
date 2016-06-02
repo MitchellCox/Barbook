@@ -28,7 +28,7 @@ const Document = React.createClass({
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <link rel="shortcut icon" href={favicon}/>
           <link rel="stylesheet" href="/materialize.min.css" />
-          <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
           <title>{title}</title>          
           {styles}
         </head>

@@ -14,7 +14,6 @@ mongoose.model('Cocktail', Cocktail)
 var Drink = mongoose.model('Cocktail')
 mongoose.connect('mongodb://localhost/barbook')
 
-
 fs.readFile('./drinks.json', 'utf8', function (err, data) {
   data = JSON.parse(data)
   for (var row in data) {
