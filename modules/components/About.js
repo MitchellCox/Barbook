@@ -41,8 +41,6 @@ export default React.createClass({
               </span> 
               <br/> 
               <br/> 
-              <span className="flow-text">For more information, to ask questions, or to provide feedback, contact our team <a href="/contact">here</a>.
-              </span> 
            </div>
           </div>        
       	</body>

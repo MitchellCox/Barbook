@@ -56,9 +56,11 @@ class Login extends React.Component {
                           <label for="password" placeholder="Password">Password</label>
                         </div>
                       </div>
-                      <div className="input-field col s12">
-                        <input className="btn" type="submit"/> 
-                      </div> 
+                      <div className="row">
+                        <div className="input-field col s12">
+                          <input className="btn" type="submit"/> 
+                        </div> 
+                      </div>
                     </form>
                   </div>
                 </div>
