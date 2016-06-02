@@ -65,7 +65,9 @@ export default class Home extends React.Component {
         return(<li className="black-text center">{equ}</li>)
       })
       return(
+        <Col s={12} m={4}>
           <Card 
+            style={{ height: '475px'}}
             header={<CardTitle reveal image={res.cocktail.image} waves="light"/>}
             title={res.cocktail.name}
             reveal={
@@ -79,6 +81,7 @@ export default class Home extends React.Component {
               </div>
             }>
           </Card>
+        </Col>
       )
     })
 
@@ -98,7 +101,7 @@ export default class Home extends React.Component {
               <button type="submit" className="waves-effect waves-light btn-flat blue-grey white-text">Submit</button>
             </div>
           </form>
-          <Row className="col s12 m4">
+          <Row>
                   {paginated}
           </Row>
           <ReactPaginate 
