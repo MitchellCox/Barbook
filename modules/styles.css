@@ -28,18 +28,16 @@ h2 {
 	text-align: center;
 }
 
-h3 {
-	text-align: center;
-	color: black;
-	font-size: 16px;
-}
-
 p {
 	text-align: center;
 }
 
 div {
 	font-family: Arial;
+}
+
+#topmarg {
+	margin-top: 200px !important;
 }
 
 .founder {
@@ -67,7 +65,4 @@ div {
 	position: auto;
 }
 
-.greyPlaceholder {
-	color: red;
-}
 

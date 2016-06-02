@@ -5,6 +5,8 @@ import { Button, Icon } from 'react-materialize'
 import Title from 'react-title-component'
 import { Link } from 'react-router'
 import $ from 'jquery'
+import { footer, body, main, topmarg } from '../styles.css'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +31,7 @@ class App extends React.Component {
               <a href="/" className="brand-logo text-color grey-lighten 4">BarBook</a>
               <ul className="right hide-on-med-and-down">
                 <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <li>
                   {this.props.auth ? (
                     <a href="/login"
@@ -71,15 +74,22 @@ class App extends React.Component {
         <div>
           {this.props.children} 
         </div> 
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <div className="footer">
-          <footer className="page-footer blue-grey darken 1">
+          <footer className="page-footer blue-grey darken 1" id="topmarg">
             <div className="footer-copyright">
               <div className="container">
                 © 2016 BarBook | Discover your drink. 
               </div>
             </div>
           </footer>
-        </div>
+        </div> 
       </div>
     )
   }

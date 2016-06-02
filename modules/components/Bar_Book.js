@@ -50,11 +50,11 @@ export default class Bar_Book extends React.Component {
     	<Title render={prev => `${prev} | Bar Book`} />
   		<div className="center">
   			<div>
-    			<h3>Welcome to Your Bar Book</h3> 
-        	<h4>Your personal cocktail repository</h4>
+    			<h2>Welcome to Your BarBook</h2> 
+        	<h4>Your personal cocktail repository.</h4>
       	</div>
     	</div>
-    	<body>
+    	<body className="vertical-align: middle">
 				<div className="row">
         	<div className="col s12 m6 center">
         		<div className="card blue-grey darken 1"> 

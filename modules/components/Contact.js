@@ -10,37 +10,42 @@ export default React.createClass({
         <p>Drop us a line, tell us about your latest drink, or share a piece of valuable feedback.</p>
           
           <div className="row">
-            <form className="col s12 contact_form" action="MAILTO:mitchell.allan.cox@gmail.com" method="POST" enctype="text/plain" name="BarBook_Feedback">
+            <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://mitchellcox.wufoo.com/forms/z7plsbf0sf12r0/#public">              
               <div className="row">
                 <div className="input-field col s6">
-                  <input id="first_name" type="text" className="validate blue-grey-text"/>
-                  <label for="first_name">First Name</label>
+                  <input id="first_name Field1" type="text" className="validate blue-grey-text field text fn"/>
+                  <label for="first_name Field1">First Name</label>
                 </div>
                 <div className="input-field col s6">
-                  <input id="last_name" type="text" className="validate blue-grey-text"/>
-                  <label for="last_name">Last Name</label>
+                  <input id="last_name Field2" type="text" className="validate blue-grey-text field text ln"/>
+                  <label for="last_name Field2">Last Name</label>
                 </div>
               </div>
               <div className="row">
                 <div className="input-field col s12">
-                  <input id="email" type="email" className="validate blue-grey-text"/>
-                  <label for="email">Email</label>
+                  <input id="email foli3" type="email" className="validate blue-grey-text desc"/>
+                  <label id="title3" for="email Field3">Email</label>
                 </div>
               </div>
               <div className="row">
                 <div className="input-field col s12">
-                  <input id="feedback" type="text" className="validate blue-grey-text"/>
-                  <label for="feedback">Feedback</label>
+                  <input id="feedback title5" type="text" className="validate blue-grey-text desc"/>
+                  <label for="feedback Field5">Feedback</label>
                 </div>
               </div>
-              <div>
+              <div className="row">
                 <div className="input-field col s12">
-                  <input className="btn" type="submit" />
+                  <input id="saveForm" name="saveForm" className="btn submit" type="submit" value="Submit"/>                
                 </div> 
               </div>
+              <li className="hide">
+                <label for="comment">Do Not Fill This Out</label>
+                <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+                <input type="hidden" id="idstamp" name="idstamp" value="RFTT7AMbPiWSMBSXqN5A2EnDF75ZIgkWUmdMftp1QrE=" />
+              </li>
             </form>
           </div>
-
         </div> 
     )
   }

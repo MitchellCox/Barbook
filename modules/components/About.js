@@ -41,7 +41,7 @@ export default React.createClass({
               </span> 
               <br/> 
               <br/> 
-              <span className="flow-text">For more information, to ask questions, or to provide feedback, contact our team <a href="https://mitchellcox.wufoo.com/forms/z7plsbf0sf12r0">here</a>.
+              <span className="flow-text">For more information, to ask questions, or to provide feedback, contact our team <a href="/contact">here</a>.
               </span> 
            </div>
           </div>        
