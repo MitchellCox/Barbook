@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
 import Title from 'react-title-component'
-import { Button, Icon, Input } from 'react-materialize'
+import { Button, Icon, Input, Card, CardTitle, Row, Col } from 'react-materialize'
 import $ from 'jquery'
-import { resultCard, resultParent } from '../styles.css'
 import ReactPaginate from 'react-paginate'
 
 export default class Home extends React.Component {
@@ -56,9 +55,32 @@ export default class Home extends React.Component {
 
   render() {
    let paginated = this.state.paginated.map( res => {
-      return(<li key={res.cocktail._id}><image src={res.cocktail.image} />{res.cocktail.name}</li>)
+      let ingredients = res.cocktail.ingredients.map( ing => {
+        return(<li className="black-text center">{ing}</li>)
+      })
+      let description = res.cocktail.description.map( des => {
+        return(<li className="black-text center">{des}</li>)
+      })
+      let equipment = res.cocktail.equipment.map( equ => {
+        return(<li className="black-text center">{equ}</li>)
+      })
+      return(
+          <Card 
+            header={<CardTitle reveal image={res.cocktail.image} waves="light"/>}
+            title={res.cocktail.name}
+            reveal={
+              <div>
+                <h3>Ingredient</h3>
+                <ul>{ingredients}</ul>}
+                <h3>Instructions</h3>
+                <ul>{description}</ul>
+                <h3>Equipment</h3>
+                <ul>{equipment}</ul>
+              </div>
+            }>
+          </Card>
+      )
     })
-
 
     return (
       <div>
@@ -76,14 +98,9 @@ export default class Home extends React.Component {
               <button type="submit" className="waves-effect waves-light btn-flat blue-grey white-text">Submit</button>
             </div>
           </form>
-          <div id={resultParent} className="center row">
-            <ul>
-              {paginated}
-            </ul>
-            {/*<div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
-            <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>
-            <div className={`${resultCard} col s12 l3`}>{this.props.visible.map(image)}, {this.props.map(name)}</div>*/}
-          </div>
+          <Row className="col s12 m4">
+                  {paginated}
+          </Row>
           <ReactPaginate 
              previousLabel={"previous"}
              nextLabel={"next"}

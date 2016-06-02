@@ -1,5 +1,5 @@
 import React from 'react'
-import favicon from '../favicon.ico'
+import favicon from '../../static/images/favicon.ico'
 import styles from '../styles.css'
 import $ from 'jquery'
 

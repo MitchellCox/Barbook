@@ -28,6 +28,12 @@ h2 {
 	text-align: center;
 }
 
+h3 {
+	text-align: center;
+	color: black;
+	font-size: 16px;
+}
+
 p {
 	text-align: center;
 }
@@ -59,23 +65,6 @@ div {
 	margin-right: auto;
 	margin-left: auto;
 	position: auto;
-}
-
-.resultCard {
-	display: block;
-	position: auto;
-	background-color: white;
-	color: black;
-	width: 375px;
-	height: 375px;
-	text-align: center;
-	margin: 0px 20px 20px 40px;
-	opacity: .7;
-}
-
-.loginCard {
-	display: inline-block;
-  width: 200px;
 }
 
 .greyPlaceholder {
