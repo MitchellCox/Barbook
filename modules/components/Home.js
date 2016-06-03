@@ -37,7 +37,7 @@ export default class Home extends React.Component {
           match += 1
       }
 
-      if (match >= 2)
+      if (match >= 1)
         visible.push({ cocktail: cocktail, matches: match })
     })
    
